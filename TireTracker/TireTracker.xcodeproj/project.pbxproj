@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		853CF0E218F6009C007B4EC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF0E118F6009C007B4EC7 /* Foundation.framework */; };
+		853CF0E418F6009C007B4EC7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF0E318F6009C007B4EC7 /* CoreGraphics.framework */; };
+		853CF0E618F6009C007B4EC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF0E518F6009C007B4EC7 /* UIKit.framework */; };
+		853CF0EC18F6009C007B4EC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 853CF0EA18F6009C007B4EC7 /* InfoPlist.strings */; };
+		853CF0EE18F6009C007B4EC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 853CF0ED18F6009C007B4EC7 /* main.m */; };
+		853CF0F218F6009C007B4EC7 /* TTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 853CF0F118F6009C007B4EC7 /* TTAppDelegate.m */; };
+		853CF0F518F6009C007B4EC7 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853CF0F318F6009C007B4EC7 /* Main_iPhone.storyboard */; };
+		853CF0F818F6009C007B4EC7 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853CF0F618F6009C007B4EC7 /* Main_iPad.storyboard */; };
+		853CF0FB18F6009C007B4EC7 /* TTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853CF0FA18F6009C007B4EC7 /* TTLoginViewController.m */; };
+		853CF0FD18F6009C007B4EC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853CF0FC18F6009C007B4EC7 /* Images.xcassets */; };
+		853CF10418F6009C007B4EC7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF10318F6009C007B4EC7 /* XCTest.framework */; };
+		853CF10518F6009C007B4EC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF0E118F6009C007B4EC7 /* Foundation.framework */; };
+		853CF10618F6009C007B4EC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF0E518F6009C007B4EC7 /* UIKit.framework */; };
+		853CF10E18F6009C007B4EC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 853CF10C18F6009C007B4EC7 /* InfoPlist.strings */; };
+		853CF11018F6009C007B4EC7 /* TireTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 853CF10F18F6009C007B4EC7 /* TireTrackerTests.m */; };
+		853CF11A18F6022D007B4EC7 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF11918F6022D007B4EC7 /* Dropbox.framework */; };
+		853CF11E18F60477007B4EC7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF11D18F60477007B4EC7 /* SystemConfiguration.framework */; };
+		853CF11F18F604AE007B4EC7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF11B18F60460007B4EC7 /* CFNetwork.framework */; };
+		853CF12118F604B5007B4EC7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF12018F604B5007B4EC7 /* Security.framework */; };
+		853CF12318F604BC007B4EC7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF12218F604BC007B4EC7 /* QuartzCore.framework */; };
+		853CF12518F604C7007B4EC7 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF12418F604C7007B4EC7 /* libc++.dylib */; };
+		853CF12818F6510C007B4EC7 /* TTRacerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853CF12718F6510C007B4EC7 /* TTRacerViewController.m */; };
+		853CF17218F65AC0007B4EC7 /* TTDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 853CF17118F65AC0007B4EC7 /* TTDataProvider.m */; };
+		853CF17518F65AED007B4EC7 /* TTRacer.m in Sources */ = {isa = PBXBuildFile; fileRef = 853CF17418F65AED007B4EC7 /* TTRacer.m */; };
+		853CF17818F65F67007B4EC7 /* TTRacerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853CF17718F65F67007B4EC7 /* TTRacerTableViewCell.m */; };
+		85DE049318F679C20020BCA8 /* TTEditRacerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049218F679C20020BCA8 /* TTEditRacerViewController.m */; };
+		85DE049618F75B810020BCA8 /* TTEditRacerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049518F75B810020BCA8 /* TTEditRacerTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		853CF10718F6009C007B4EC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 853CF0D618F6009C007B4EC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 853CF0DD18F6009C007B4EC7;
+			remoteInfo = TireTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		853CF0DE18F6009C007B4EC7 /* TireTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TireTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		853CF0E118F6009C007B4EC7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		853CF0E318F6009C007B4EC7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		853CF0E518F6009C007B4EC7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		853CF0E918F6009C007B4EC7 /* TireTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TireTracker-Info.plist"; sourceTree = "<group>"; };
+		853CF0EB18F6009C007B4EC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		853CF0ED18F6009C007B4EC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		853CF0EF18F6009C007B4EC7 /* TireTracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TireTracker-Prefix.pch"; sourceTree = "<group>"; };
+		853CF0F018F6009C007B4EC7 /* TTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTAppDelegate.h; sourceTree = "<group>"; };
+		853CF0F118F6009C007B4EC7 /* TTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAppDelegate.m; sourceTree = "<group>"; };
+		853CF0F418F6009C007B4EC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		853CF0F718F6009C007B4EC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		853CF0F918F6009C007B4EC7 /* TTLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTLoginViewController.h; sourceTree = "<group>"; };
+		853CF0FA18F6009C007B4EC7 /* TTLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTLoginViewController.m; sourceTree = "<group>"; };
+		853CF0FC18F6009C007B4EC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		853CF10218F6009C007B4EC7 /* TireTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TireTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		853CF10318F6009C007B4EC7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		853CF10B18F6009C007B4EC7 /* TireTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TireTrackerTests-Info.plist"; sourceTree = "<group>"; };
+		853CF10D18F6009C007B4EC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		853CF10F18F6009C007B4EC7 /* TireTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TireTrackerTests.m; sourceTree = "<group>"; };
+		853CF11918F6022D007B4EC7 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		853CF11B18F60460007B4EC7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		853CF11D18F60477007B4EC7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		853CF12018F604B5007B4EC7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		853CF12218F604BC007B4EC7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		853CF12418F604C7007B4EC7 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		853CF12618F6510C007B4EC7 /* TTRacerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRacerViewController.h; sourceTree = "<group>"; };
+		853CF12718F6510C007B4EC7 /* TTRacerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRacerViewController.m; sourceTree = "<group>"; };
+		853CF17018F65AC0007B4EC7 /* TTDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDataProvider.h; sourceTree = "<group>"; };
+		853CF17118F65AC0007B4EC7 /* TTDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDataProvider.m; sourceTree = "<group>"; };
+		853CF17318F65AED007B4EC7 /* TTRacer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRacer.h; sourceTree = "<group>"; };
+		853CF17418F65AED007B4EC7 /* TTRacer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRacer.m; sourceTree = "<group>"; };
+		853CF17618F65F67007B4EC7 /* TTRacerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRacerTableViewCell.h; sourceTree = "<group>"; };
+		853CF17718F65F67007B4EC7 /* TTRacerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRacerTableViewCell.m; sourceTree = "<group>"; };
+		85DE049118F679C20020BCA8 /* TTEditRacerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTEditRacerViewController.h; sourceTree = "<group>"; };
+		85DE049218F679C20020BCA8 /* TTEditRacerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTEditRacerViewController.m; sourceTree = "<group>"; };
+		85DE049418F75B810020BCA8 /* TTEditRacerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTEditRacerTableViewController.h; sourceTree = "<group>"; };
+		85DE049518F75B810020BCA8 /* TTEditRacerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTEditRacerTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		853CF0DB18F6009C007B4EC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853CF12518F604C7007B4EC7 /* libc++.dylib in Frameworks */,
+				853CF12318F604BC007B4EC7 /* QuartzCore.framework in Frameworks */,
+				853CF12118F604B5007B4EC7 /* Security.framework in Frameworks */,
+				853CF11F18F604AE007B4EC7 /* CFNetwork.framework in Frameworks */,
+				853CF11E18F60477007B4EC7 /* SystemConfiguration.framework in Frameworks */,
+				853CF11A18F6022D007B4EC7 /* Dropbox.framework in Frameworks */,
+				853CF0E418F6009C007B4EC7 /* CoreGraphics.framework in Frameworks */,
+				853CF0E618F6009C007B4EC7 /* UIKit.framework in Frameworks */,
+				853CF0E218F6009C007B4EC7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		853CF0FF18F6009C007B4EC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853CF10418F6009C007B4EC7 /* XCTest.framework in Frameworks */,
+				853CF10618F6009C007B4EC7 /* UIKit.framework in Frameworks */,
+				853CF10518F6009C007B4EC7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		853CF0D518F6009C007B4EC7 = {
+			isa = PBXGroup;
+			children = (
+				853CF0E718F6009C007B4EC7 /* TireTracker */,
+				853CF10918F6009C007B4EC7 /* TireTrackerTests */,
+				853CF0E018F6009C007B4EC7 /* Frameworks */,
+				853CF0DF18F6009C007B4EC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		853CF0DF18F6009C007B4EC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				853CF0DE18F6009C007B4EC7 /* TireTracker.app */,
+				853CF10218F6009C007B4EC7 /* TireTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		853CF0E018F6009C007B4EC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				853CF12418F604C7007B4EC7 /* libc++.dylib */,
+				853CF12218F604BC007B4EC7 /* QuartzCore.framework */,
+				853CF12018F604B5007B4EC7 /* Security.framework */,
+				853CF11D18F60477007B4EC7 /* SystemConfiguration.framework */,
+				853CF11B18F60460007B4EC7 /* CFNetwork.framework */,
+				853CF11918F6022D007B4EC7 /* Dropbox.framework */,
+				853CF0E118F6009C007B4EC7 /* Foundation.framework */,
+				853CF0E318F6009C007B4EC7 /* CoreGraphics.framework */,
+				853CF0E518F6009C007B4EC7 /* UIKit.framework */,
+				853CF10318F6009C007B4EC7 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		853CF0E718F6009C007B4EC7 /* TireTracker */ = {
+			isa = PBXGroup;
+			children = (
+				853CF17618F65F67007B4EC7 /* TTRacerTableViewCell.h */,
+				853CF17718F65F67007B4EC7 /* TTRacerTableViewCell.m */,
+				853CF0F018F6009C007B4EC7 /* TTAppDelegate.h */,
+				853CF0F118F6009C007B4EC7 /* TTAppDelegate.m */,
+				853CF0F318F6009C007B4EC7 /* Main_iPhone.storyboard */,
+				853CF0F618F6009C007B4EC7 /* Main_iPad.storyboard */,
+				853CF0F918F6009C007B4EC7 /* TTLoginViewController.h */,
+				853CF0FA18F6009C007B4EC7 /* TTLoginViewController.m */,
+				853CF12618F6510C007B4EC7 /* TTRacerViewController.h */,
+				853CF12718F6510C007B4EC7 /* TTRacerViewController.m */,
+				853CF0FC18F6009C007B4EC7 /* Images.xcassets */,
+				853CF0E818F6009C007B4EC7 /* Supporting Files */,
+				853CF17018F65AC0007B4EC7 /* TTDataProvider.h */,
+				853CF17118F65AC0007B4EC7 /* TTDataProvider.m */,
+				853CF17318F65AED007B4EC7 /* TTRacer.h */,
+				853CF17418F65AED007B4EC7 /* TTRacer.m */,
+				85DE049118F679C20020BCA8 /* TTEditRacerViewController.h */,
+				85DE049218F679C20020BCA8 /* TTEditRacerViewController.m */,
+				85DE049418F75B810020BCA8 /* TTEditRacerTableViewController.h */,
+				85DE049518F75B810020BCA8 /* TTEditRacerTableViewController.m */,
+			);
+			path = TireTracker;
+			sourceTree = "<group>";
+		};
+		853CF0E818F6009C007B4EC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				853CF0E918F6009C007B4EC7 /* TireTracker-Info.plist */,
+				853CF0EA18F6009C007B4EC7 /* InfoPlist.strings */,
+				853CF0ED18F6009C007B4EC7 /* main.m */,
+				853CF0EF18F6009C007B4EC7 /* TireTracker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		853CF10918F6009C007B4EC7 /* TireTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				853CF10F18F6009C007B4EC7 /* TireTrackerTests.m */,
+				853CF10A18F6009C007B4EC7 /* Supporting Files */,
+			);
+			path = TireTrackerTests;
+			sourceTree = "<group>";
+		};
+		853CF10A18F6009C007B4EC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				853CF10B18F6009C007B4EC7 /* TireTrackerTests-Info.plist */,
+				853CF10C18F6009C007B4EC7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		853CF0DD18F6009C007B4EC7 /* TireTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 853CF11318F6009C007B4EC7 /* Build configuration list for PBXNativeTarget "TireTracker" */;
+			buildPhases = (
+				853CF0DA18F6009C007B4EC7 /* Sources */,
+				853CF0DB18F6009C007B4EC7 /* Frameworks */,
+				853CF0DC18F6009C007B4EC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TireTracker;
+			productName = TireTracker;
+			productReference = 853CF0DE18F6009C007B4EC7 /* TireTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		853CF10118F6009C007B4EC7 /* TireTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 853CF11618F6009C007B4EC7 /* Build configuration list for PBXNativeTarget "TireTrackerTests" */;
+			buildPhases = (
+				853CF0FE18F6009C007B4EC7 /* Sources */,
+				853CF0FF18F6009C007B4EC7 /* Frameworks */,
+				853CF10018F6009C007B4EC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				853CF10818F6009C007B4EC7 /* PBXTargetDependency */,
+			);
+			name = TireTrackerTests;
+			productName = TireTrackerTests;
+			productReference = 853CF10218F6009C007B4EC7 /* TireTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		853CF0D618F6009C007B4EC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TT;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Cory Zachman";
+				TargetAttributes = {
+					853CF10118F6009C007B4EC7 = {
+						TestTargetID = 853CF0DD18F6009C007B4EC7;
+					};
+				};
+			};
+			buildConfigurationList = 853CF0D918F6009C007B4EC7 /* Build configuration list for PBXProject "TireTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 853CF0D518F6009C007B4EC7;
+			productRefGroup = 853CF0DF18F6009C007B4EC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				853CF0DD18F6009C007B4EC7 /* TireTracker */,
+				853CF10118F6009C007B4EC7 /* TireTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		853CF0DC18F6009C007B4EC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853CF0F818F6009C007B4EC7 /* Main_iPad.storyboard in Resources */,
+				853CF0FD18F6009C007B4EC7 /* Images.xcassets in Resources */,
+				853CF0F518F6009C007B4EC7 /* Main_iPhone.storyboard in Resources */,
+				853CF0EC18F6009C007B4EC7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		853CF10018F6009C007B4EC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853CF10E18F6009C007B4EC7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		853CF0DA18F6009C007B4EC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85DE049318F679C20020BCA8 /* TTEditRacerViewController.m in Sources */,
+				853CF0F218F6009C007B4EC7 /* TTAppDelegate.m in Sources */,
+				853CF17518F65AED007B4EC7 /* TTRacer.m in Sources */,
+				853CF17818F65F67007B4EC7 /* TTRacerTableViewCell.m in Sources */,
+				853CF0EE18F6009C007B4EC7 /* main.m in Sources */,
+				853CF17218F65AC0007B4EC7 /* TTDataProvider.m in Sources */,
+				853CF12818F6510C007B4EC7 /* TTRacerViewController.m in Sources */,
+				853CF0FB18F6009C007B4EC7 /* TTLoginViewController.m in Sources */,
+				85DE049618F75B810020BCA8 /* TTEditRacerTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		853CF0FE18F6009C007B4EC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853CF11018F6009C007B4EC7 /* TireTrackerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		853CF10818F6009C007B4EC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 853CF0DD18F6009C007B4EC7 /* TireTracker */;
+			targetProxy = 853CF10718F6009C007B4EC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		853CF0EA18F6009C007B4EC7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				853CF0EB18F6009C007B4EC7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		853CF0F318F6009C007B4EC7 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				853CF0F418F6009C007B4EC7 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		853CF0F618F6009C007B4EC7 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				853CF0F718F6009C007B4EC7 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		853CF10C18F6009C007B4EC7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				853CF10D18F6009C007B4EC7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		853CF11118F6009C007B4EC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		853CF11218F6009C007B4EC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		853CF11418F6009C007B4EC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TireTracker/TireTracker-Prefix.pch";
+				INFOPLIST_FILE = "TireTracker/TireTracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		853CF11518F6009C007B4EC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TireTracker/TireTracker-Prefix.pch";
+				INFOPLIST_FILE = "TireTracker/TireTracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		853CF11718F6009C007B4EC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TireTracker.app/TireTracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TireTracker/TireTracker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TireTrackerTests/TireTrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		853CF11818F6009C007B4EC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TireTracker.app/TireTracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TireTracker/TireTracker-Prefix.pch";
+				INFOPLIST_FILE = "TireTrackerTests/TireTrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		853CF0D918F6009C007B4EC7 /* Build configuration list for PBXProject "TireTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				853CF11118F6009C007B4EC7 /* Debug */,
+				853CF11218F6009C007B4EC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		853CF11318F6009C007B4EC7 /* Build configuration list for PBXNativeTarget "TireTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				853CF11418F6009C007B4EC7 /* Debug */,
+				853CF11518F6009C007B4EC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		853CF11618F6009C007B4EC7 /* Build configuration list for PBXNativeTarget "TireTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				853CF11718F6009C007B4EC7 /* Debug */,
+				853CF11818F6009C007B4EC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 853CF0D618F6009C007B4EC7 /* Project object */;
+}
