@@ -1,0 +1,3 @@
+[submodule "TireTracker/FontAwesome"]
+	path = TireTracker/FontAwesome
+	url = https://github.com/alexdrone/ios-fontawesome.git
