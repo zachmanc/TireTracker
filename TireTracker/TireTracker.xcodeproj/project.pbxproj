@@ -34,6 +34,11 @@
 		853CF17818F65F67007B4EC7 /* TTRacerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853CF17718F65F67007B4EC7 /* TTRacerTableViewCell.m */; };
 		85DE049318F679C20020BCA8 /* TTEditRacerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049218F679C20020BCA8 /* TTEditRacerViewController.m */; };
 		85DE049618F75B810020BCA8 /* TTEditRacerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049518F75B810020BCA8 /* TTEditRacerTableViewController.m */; };
+		85DE049E18F77CDB0020BCA8 /* FAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049918F77CDB0020BCA8 /* FAImageView.m */; };
+		85DE049F18F77CDB0020BCA8 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049B18F77CDB0020BCA8 /* NSString+FontAwesome.m */; };
+		85DE04A018F77CDB0020BCA8 /* UIFont+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049D18F77CDB0020BCA8 /* UIFont+FontAwesome.m */; };
+		85DE04A218F77CFE0020BCA8 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85DE04A118F77CFE0020BCA8 /* FontAwesome.ttf */; };
+		85DE04A418F7874D0020BCA8 /* Transport-Tire-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85DE04A318F7874D0020BCA8 /* Transport-Tire-icon2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +90,14 @@
 		85DE049218F679C20020BCA8 /* TTEditRacerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTEditRacerViewController.m; sourceTree = "<group>"; };
 		85DE049418F75B810020BCA8 /* TTEditRacerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTEditRacerTableViewController.h; sourceTree = "<group>"; };
 		85DE049518F75B810020BCA8 /* TTEditRacerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTEditRacerTableViewController.m; sourceTree = "<group>"; };
+		85DE049818F77CDB0020BCA8 /* FAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FAImageView.h; path = FontAwesome/FAImageView.h; sourceTree = "<group>"; };
+		85DE049918F77CDB0020BCA8 /* FAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAImageView.m; path = FontAwesome/FAImageView.m; sourceTree = "<group>"; };
+		85DE049A18F77CDB0020BCA8 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+FontAwesome.h"; path = "FontAwesome/NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		85DE049B18F77CDB0020BCA8 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+FontAwesome.m"; path = "FontAwesome/NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		85DE049C18F77CDB0020BCA8 /* UIFont+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+FontAwesome.h"; path = "FontAwesome/UIFont+FontAwesome.h"; sourceTree = "<group>"; };
+		85DE049D18F77CDB0020BCA8 /* UIFont+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+FontAwesome.m"; path = "FontAwesome/UIFont+FontAwesome.m"; sourceTree = "<group>"; };
+		85DE04A118F77CFE0020BCA8 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = FontAwesome/Resources/FontAwesome.ttf; sourceTree = SOURCE_ROOT; };
+		85DE04A318F7874D0020BCA8 /* Transport-Tire-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Transport-Tire-icon2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +133,7 @@
 		853CF0D518F6009C007B4EC7 = {
 			isa = PBXGroup;
 			children = (
+				85DE049718F77CC40020BCA8 /* FontAwesome */,
 				853CF0E718F6009C007B4EC7 /* TireTracker */,
 				853CF10918F6009C007B4EC7 /* TireTrackerTests */,
 				853CF0E018F6009C007B4EC7 /* Frameworks */,
@@ -183,6 +197,8 @@
 		853CF0E818F6009C007B4EC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				85DE04A318F7874D0020BCA8 /* Transport-Tire-icon2.png */,
+				85DE04A118F77CFE0020BCA8 /* FontAwesome.ttf */,
 				853CF0E918F6009C007B4EC7 /* TireTracker-Info.plist */,
 				853CF0EA18F6009C007B4EC7 /* InfoPlist.strings */,
 				853CF0ED18F6009C007B4EC7 /* main.m */,
@@ -207,6 +223,19 @@
 				853CF10C18F6009C007B4EC7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85DE049718F77CC40020BCA8 /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				85DE049818F77CDB0020BCA8 /* FAImageView.h */,
+				85DE049918F77CDB0020BCA8 /* FAImageView.m */,
+				85DE049A18F77CDB0020BCA8 /* NSString+FontAwesome.h */,
+				85DE049B18F77CDB0020BCA8 /* NSString+FontAwesome.m */,
+				85DE049C18F77CDB0020BCA8 /* UIFont+FontAwesome.h */,
+				85DE049D18F77CDB0020BCA8 /* UIFont+FontAwesome.m */,
+			);
+			name = FontAwesome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +316,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				853CF0F818F6009C007B4EC7 /* Main_iPad.storyboard in Resources */,
+				85DE04A218F77CFE0020BCA8 /* FontAwesome.ttf in Resources */,
 				853CF0FD18F6009C007B4EC7 /* Images.xcassets in Resources */,
+				85DE04A418F7874D0020BCA8 /* Transport-Tire-icon2.png in Resources */,
 				853CF0F518F6009C007B4EC7 /* Main_iPhone.storyboard in Resources */,
 				853CF0EC18F6009C007B4EC7 /* InfoPlist.strings in Resources */,
 			);
@@ -312,11 +343,14 @@
 				853CF0F218F6009C007B4EC7 /* TTAppDelegate.m in Sources */,
 				853CF17518F65AED007B4EC7 /* TTRacer.m in Sources */,
 				853CF17818F65F67007B4EC7 /* TTRacerTableViewCell.m in Sources */,
+				85DE049F18F77CDB0020BCA8 /* NSString+FontAwesome.m in Sources */,
 				853CF0EE18F6009C007B4EC7 /* main.m in Sources */,
 				853CF17218F65AC0007B4EC7 /* TTDataProvider.m in Sources */,
 				853CF12818F6510C007B4EC7 /* TTRacerViewController.m in Sources */,
+				85DE049E18F77CDB0020BCA8 /* FAImageView.m in Sources */,
 				853CF0FB18F6009C007B4EC7 /* TTLoginViewController.m in Sources */,
 				85DE049618F75B810020BCA8 /* TTEditRacerTableViewController.m in Sources */,
+				85DE04A018F77CDB0020BCA8 /* UIFont+FontAwesome.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

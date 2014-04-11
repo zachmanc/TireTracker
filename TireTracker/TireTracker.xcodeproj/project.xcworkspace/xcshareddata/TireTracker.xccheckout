@@ -12,6 +12,8 @@
 	<dict>
 		<key>1ADA7AF9-5E15-451E-BA02-8419EBED392B</key>
 		<string>ssh://github.com/zachmanc/TireTracker.git</string>
+		<key>2BC80E95-D708-4855-8860-7B0962E8F2A4</key>
+		<string>https://github.com/alexdrone/ios-fontawesome.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>TireTracker/TireTracker.xcodeproj/project.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>1ADA7AF9-5E15-451E-BA02-8419EBED392B</key>
 		<string>../../..</string>
+		<key>2BC80E95-D708-4855-8860-7B0962E8F2A4</key>
+		<string>../../FontAwesome</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/zachmanc/TireTracker.git</string>
@@ -28,6 +32,14 @@
 	<string>1ADA7AF9-5E15-451E-BA02-8419EBED392B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2BC80E95-D708-4855-8860-7B0962E8F2A4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FontAwesome</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

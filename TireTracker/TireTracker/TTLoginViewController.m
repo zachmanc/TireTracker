@@ -9,7 +9,8 @@
 #import "TTLoginViewController.h"
 #import <Dropbox/Dropbox.h>
 #import "TTRacerViewController.h"
-
+#import "NSString+FontAwesome.h"
+#import "UIFont+FontAwesome.h"
 @interface TTLoginViewController ()
 
 @end
@@ -19,12 +20,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self.dropBoxLoginButton.titleLabel setFont:[UIFont fontWithName:kFontAwesomeFamilyName size:20]];
+    [self.dropBoxLoginButton setTitle:[NSString stringWithFormat:@"%@ %@ %@",[NSString fontAwesomeIconStringForEnum:FADropbox],@"Login With Dropbox",[NSString fontAwesomeIconStringForEnum:FADropbox]] forState:UIControlStateNormal];
+    [self.dropBoxLoginButton setTitle:[NSString stringWithFormat:@"%@ %@ %@",[NSString fontAwesomeIconStringForEnum:FADropbox],@"Login With Dropbox",[NSString fontAwesomeIconStringForEnum:FADropbox]] forState:UIControlStateHighlighted];
+    [self.dropBoxLoginButton setTitle:[NSString stringWithFormat:@"%@ %@ %@",[NSString fontAwesomeIconStringForEnum:FADropbox],@"Login With Dropbox",[NSString fontAwesomeIconStringForEnum:FADropbox]] forState:UIControlStateSelected];
+    [self.dropBoxLoginButton setTitle:[NSString stringWithFormat:@"%@ %@ %@",[NSString fontAwesomeIconStringForEnum:FADropbox],@"Login With Dropbox",[NSString fontAwesomeIconStringForEnum:FADropbox]] forState:UIControlStateDisabled];
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    NSLog(@"View Appeared");
 }
 
 - (void)didReceiveMemoryWarning

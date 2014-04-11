@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TTLoginViewController : UIViewController
-@property UIButton *loginButton;
+@property IBOutlet UIButton *dropBoxLoginButton;
 @end
