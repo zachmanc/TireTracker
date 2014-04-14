@@ -55,16 +55,38 @@
     }
 }
 
+-(void)enterEditMode
+{
+    [self.editButtonBarItem setTitle:@"Save"];
+    self.editRacerTableViewController.firstNameTextField.enabled = YES;
+    self.editRacerTableViewController.lastNameTextField.enabled = YES;
+    self.editRacerTableViewController.groupTextField.enabled = YES;
+    
+    [self.editRacerTableViewController.firstNameTextField becomeFirstResponder];
+}
+
+-(void)savedButtonPressed
+{
+    [self.editButtonBarItem setTitle:@"Edit"];
+    [self.view endEditing:YES];
+}
+
 #pragma mark - Navigation
 
 -(IBAction)editButtonPressed:(id)sender
 {
-    
+    self.inEditMode = !self.inEditMode;
+    if (self.inEditMode) {
+        [self enterEditMode];
+    }else{
+        [self savedButtonPressed];
+    }
 }
 
 -(IBAction)backButtonPressed:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 #pragma mark - Table View Methods

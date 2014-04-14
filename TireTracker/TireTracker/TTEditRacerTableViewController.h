@@ -13,6 +13,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *groupTextField;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
+@property (weak, nonatomic) IBOutlet UIButton *editTiresButton;
+
 @property TTRacer *racer;
 -(void)updateUI;
 -(void)editButtonPressed;

@@ -13,4 +13,7 @@
 @property TTRacer *racer;
 @property (weak, nonatomic) IBOutlet TTEditRacerTableViewController *editRacerTableViewController;
 @property (weak, nonatomic) IBOutlet UIView *editTableViewController;
+@property IBOutlet UIBarButtonItem *editButtonBarItem;
+@property IBOutlet UIBarButtonItem *backButtonBarItem;
+@property BOOL inEditMode;
 @end

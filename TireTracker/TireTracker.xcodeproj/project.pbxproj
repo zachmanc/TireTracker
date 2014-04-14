@@ -32,6 +32,16 @@
 		853CF17218F65AC0007B4EC7 /* TTDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 853CF17118F65AC0007B4EC7 /* TTDataProvider.m */; };
 		853CF17518F65AED007B4EC7 /* TTRacer.m in Sources */ = {isa = PBXBuildFile; fileRef = 853CF17418F65AED007B4EC7 /* TTRacer.m */; };
 		853CF17818F65F67007B4EC7 /* TTRacerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853CF17718F65F67007B4EC7 /* TTRacerTableViewCell.m */; };
+		85A8E17D18F78E4900D908A0 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A8E17518F78E4900D908A0 /* Icon-40.png */; };
+		85A8E17E18F78E4900D908A0 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A8E17618F78E4900D908A0 /* Icon-40@2x.png */; };
+		85A8E17F18F78E4900D908A0 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A8E17718F78E4900D908A0 /* Icon-60.png */; };
+		85A8E18018F78E4900D908A0 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A8E17818F78E4900D908A0 /* Icon-60@2x.png */; };
+		85A8E18118F78E4900D908A0 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A8E17918F78E4900D908A0 /* Icon-76.png */; };
+		85A8E18218F78E4900D908A0 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A8E17A18F78E4900D908A0 /* Icon-76@2x.png */; };
+		85A8E18318F78E4900D908A0 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A8E17B18F78E4900D908A0 /* Icon-Small.png */; };
+		85A8E18418F78E4900D908A0 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A8E17C18F78E4900D908A0 /* Icon-Small@2x.png */; };
+		85CD7C5218F9DFAA00C19728 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CD7C5118F9DFAA00C19728 /* Images-2.xcassets */; };
+		85CD7C5418F9E02300C19728 /* BaseImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CD7C5318F9E02300C19728 /* BaseImage.png */; };
 		85DE049318F679C20020BCA8 /* TTEditRacerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049218F679C20020BCA8 /* TTEditRacerViewController.m */; };
 		85DE049618F75B810020BCA8 /* TTEditRacerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049518F75B810020BCA8 /* TTEditRacerTableViewController.m */; };
 		85DE049E18F77CDB0020BCA8 /* FAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049918F77CDB0020BCA8 /* FAImageView.m */; };
@@ -39,6 +49,7 @@
 		85DE04A018F77CDB0020BCA8 /* UIFont+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049D18F77CDB0020BCA8 /* UIFont+FontAwesome.m */; };
 		85DE04A218F77CFE0020BCA8 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85DE04A118F77CFE0020BCA8 /* FontAwesome.ttf */; };
 		85DE04A418F7874D0020BCA8 /* Transport-Tire-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85DE04A318F7874D0020BCA8 /* Transport-Tire-icon2.png */; };
+		85DE04A818F78CF40020BCA8 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85DE04A718F78CF40020BCA8 /* Images-2.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +97,16 @@
 		853CF17418F65AED007B4EC7 /* TTRacer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRacer.m; sourceTree = "<group>"; };
 		853CF17618F65F67007B4EC7 /* TTRacerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRacerTableViewCell.h; sourceTree = "<group>"; };
 		853CF17718F65F67007B4EC7 /* TTRacerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRacerTableViewCell.m; sourceTree = "<group>"; };
+		85A8E17518F78E4900D908A0 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-40.png"; path = "Icons/Icon-40.png"; sourceTree = SOURCE_ROOT; };
+		85A8E17618F78E4900D908A0 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-40@2x.png"; path = "Icons/Icon-40@2x.png"; sourceTree = SOURCE_ROOT; };
+		85A8E17718F78E4900D908A0 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60.png"; path = "Icons/Icon-60.png"; sourceTree = SOURCE_ROOT; };
+		85A8E17818F78E4900D908A0 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Icons/Icon-60@2x.png"; sourceTree = SOURCE_ROOT; };
+		85A8E17918F78E4900D908A0 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76.png"; path = "Icons/Icon-76.png"; sourceTree = SOURCE_ROOT; };
+		85A8E17A18F78E4900D908A0 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76@2x.png"; path = "Icons/Icon-76@2x.png"; sourceTree = SOURCE_ROOT; };
+		85A8E17B18F78E4900D908A0 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Icons/Icon-Small.png"; sourceTree = SOURCE_ROOT; };
+		85A8E17C18F78E4900D908A0 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Icons/Icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
+		85CD7C5118F9DFAA00C19728 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		85CD7C5318F9E02300C19728 /* BaseImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BaseImage.png; path = Icons/BaseImage.png; sourceTree = SOURCE_ROOT; };
 		85DE049118F679C20020BCA8 /* TTEditRacerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTEditRacerViewController.h; sourceTree = "<group>"; };
 		85DE049218F679C20020BCA8 /* TTEditRacerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTEditRacerViewController.m; sourceTree = "<group>"; };
 		85DE049418F75B810020BCA8 /* TTEditRacerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTEditRacerTableViewController.h; sourceTree = "<group>"; };
@@ -98,6 +119,7 @@
 		85DE049D18F77CDB0020BCA8 /* UIFont+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+FontAwesome.m"; path = "FontAwesome/UIFont+FontAwesome.m"; sourceTree = "<group>"; };
 		85DE04A118F77CFE0020BCA8 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = FontAwesome/Resources/FontAwesome.ttf; sourceTree = SOURCE_ROOT; };
 		85DE04A318F7874D0020BCA8 /* Transport-Tire-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Transport-Tire-icon2.png"; sourceTree = "<group>"; };
+		85DE04A718F78CF40020BCA8 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +212,8 @@
 				85DE049218F679C20020BCA8 /* TTEditRacerViewController.m */,
 				85DE049418F75B810020BCA8 /* TTEditRacerTableViewController.h */,
 				85DE049518F75B810020BCA8 /* TTEditRacerTableViewController.m */,
+				85DE04A718F78CF40020BCA8 /* Images-2.xcassets */,
+				85CD7C5118F9DFAA00C19728 /* Images-2.xcassets */,
 			);
 			path = TireTracker;
 			sourceTree = "<group>";
@@ -197,6 +221,7 @@
 		853CF0E818F6009C007B4EC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				85A8E17418F78E3C00D908A0 /* Icons */,
 				85DE04A318F7874D0020BCA8 /* Transport-Tire-icon2.png */,
 				85DE04A118F77CFE0020BCA8 /* FontAwesome.ttf */,
 				853CF0E918F6009C007B4EC7 /* TireTracker-Info.plist */,
@@ -223,6 +248,22 @@
 				853CF10C18F6009C007B4EC7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85A8E17418F78E3C00D908A0 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				85CD7C5318F9E02300C19728 /* BaseImage.png */,
+				85A8E17518F78E4900D908A0 /* Icon-40.png */,
+				85A8E17618F78E4900D908A0 /* Icon-40@2x.png */,
+				85A8E17718F78E4900D908A0 /* Icon-60.png */,
+				85A8E17818F78E4900D908A0 /* Icon-60@2x.png */,
+				85A8E17918F78E4900D908A0 /* Icon-76.png */,
+				85A8E17A18F78E4900D908A0 /* Icon-76@2x.png */,
+				85A8E17B18F78E4900D908A0 /* Icon-Small.png */,
+				85A8E17C18F78E4900D908A0 /* Icon-Small@2x.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 		85DE049718F77CC40020BCA8 /* FontAwesome */ = {
@@ -316,11 +357,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				853CF0F818F6009C007B4EC7 /* Main_iPad.storyboard in Resources */,
+				85A8E18118F78E4900D908A0 /* Icon-76.png in Resources */,
 				85DE04A218F77CFE0020BCA8 /* FontAwesome.ttf in Resources */,
+				85DE04A818F78CF40020BCA8 /* Images-2.xcassets in Resources */,
+				85A8E18218F78E4900D908A0 /* Icon-76@2x.png in Resources */,
 				853CF0FD18F6009C007B4EC7 /* Images.xcassets in Resources */,
+				85A8E17F18F78E4900D908A0 /* Icon-60.png in Resources */,
 				85DE04A418F7874D0020BCA8 /* Transport-Tire-icon2.png in Resources */,
+				85A8E18318F78E4900D908A0 /* Icon-Small.png in Resources */,
 				853CF0F518F6009C007B4EC7 /* Main_iPhone.storyboard in Resources */,
 				853CF0EC18F6009C007B4EC7 /* InfoPlist.strings in Resources */,
+				85A8E17D18F78E4900D908A0 /* Icon-40.png in Resources */,
+				85A8E18418F78E4900D908A0 /* Icon-Small@2x.png in Resources */,
+				85A8E17E18F78E4900D908A0 /* Icon-40@2x.png in Resources */,
+				85CD7C5218F9DFAA00C19728 /* Images-2.xcassets in Resources */,
+				85A8E18018F78E4900D908A0 /* Icon-60@2x.png in Resources */,
+				85CD7C5418F9E02300C19728 /* BaseImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

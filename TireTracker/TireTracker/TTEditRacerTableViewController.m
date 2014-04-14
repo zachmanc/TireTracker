@@ -7,6 +7,8 @@
 //
 
 #import "TTEditRacerTableViewController.h"
+#import "NSString+FontAwesome.h"
+#import "UIFont+FontAwesome.h"
 
 @interface TTEditRacerTableViewController ()
 
@@ -32,6 +34,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.editTiresButton.titleLabel setFont:[UIFont fontWithName:kFontAwesomeFamilyName size:18]];
+    [self.editTiresButton setTitle:[NSString fontAwesomeIconStringForEnum:FAPencil] forState:UIControlStateNormal];
+    [self.editTiresButton setTitle:[NSString fontAwesomeIconStringForEnum:FAPencil] forState:UIControlStateHighlighted];
+    [self.editTiresButton setTitle:[NSString fontAwesomeIconStringForEnum:FAPencil] forState:UIControlStateSelected];
+    [self.editTiresButton setTitle:[NSString fontAwesomeIconStringForEnum:FAPencil] forState:UIControlStateDisabled];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,7 +56,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 8;
+    return 5;
 }
 
 -(void)updateUI
