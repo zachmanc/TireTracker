@@ -1,20 +1,18 @@
 //
-//  TTEditRacerTableTableViewController.m
+//  TTTireTableViewController.m
 //  TireTracker
 //
-//  Created by Cory Zachman on 4/10/14.
+//  Created by Cory Zachman on 4/13/14.
 //  Copyright (c) 2014 Cory Zachman. All rights reserved.
 //
 
-#import "TTEditRacerTableViewController.h"
-#import "NSString+FontAwesome.h"
-#import "UIFont+FontAwesome.h"
+#import "TTTireTableViewController.h"
 
-@interface TTEditRacerTableViewController ()
+@interface TTTireTableViewController ()
 
 @end
 
-@implementation TTEditRacerTableViewController
+@implementation TTTireTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,11 +32,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self.editTiresButton.titleLabel setFont:[UIFont fontWithName:kFontAwesomeFamilyName size:18]];
-    [self.editTiresButton setTitle:[NSString fontAwesomeIconStringForEnum:FAPencil] forState:UIControlStateNormal];
-    [self.editTiresButton setTitle:[NSString fontAwesomeIconStringForEnum:FAPencil] forState:UIControlStateHighlighted];
-    [self.editTiresButton setTitle:[NSString fontAwesomeIconStringForEnum:FAPencil] forState:UIControlStateSelected];
-    [self.editTiresButton setTitle:[NSString fontAwesomeIconStringForEnum:FAPencil] forState:UIControlStateDisabled];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,39 +44,22 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
-}
-
--(void)updateUI
-{
-    if(self.racer != nil)
-    {
-        self.firstNameTextField.text = self.racer.first;
-        self.lastNameTextField.text = self.racer.last;
-        self.groupTextField.text = self.racer.group;
-    }
-}
-
--(IBAction)editButtonPressed:(id)sender
-{
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TireListViewController"];
-    [vc setModalPresentationStyle:UIModalPresentationFullScreen];
-    
-    [self presentViewController:vc animated:YES completion:^{
-        
-    }];
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
 }
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
     

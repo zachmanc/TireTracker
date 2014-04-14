@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011E1FD818FBA429005C03FD /* TTBarcodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011E1FD718FBA429005C03FD /* TTBarcodeScannerViewController.m */; };
+		011E1FDB18FBA486005C03FD /* TTTireListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011E1FDA18FBA486005C03FD /* TTTireListViewController.m */; };
+		011E1FDE18FBA580005C03FD /* TTTireTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011E1FDD18FBA580005C03FD /* TTTireTableViewController.m */; };
 		853CF0E218F6009C007B4EC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF0E118F6009C007B4EC7 /* Foundation.framework */; };
 		853CF0E418F6009C007B4EC7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF0E318F6009C007B4EC7 /* CoreGraphics.framework */; };
 		853CF0E618F6009C007B4EC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853CF0E518F6009C007B4EC7 /* UIKit.framework */; };
@@ -63,6 +66,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011E1FD618FBA429005C03FD /* TTBarcodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBarcodeScannerViewController.h; sourceTree = "<group>"; };
+		011E1FD718FBA429005C03FD /* TTBarcodeScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBarcodeScannerViewController.m; sourceTree = "<group>"; };
+		011E1FD918FBA486005C03FD /* TTTireListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTireListViewController.h; sourceTree = "<group>"; };
+		011E1FDA18FBA486005C03FD /* TTTireListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTireListViewController.m; sourceTree = "<group>"; };
+		011E1FDC18FBA580005C03FD /* TTTireTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTireTableViewController.h; sourceTree = "<group>"; };
+		011E1FDD18FBA580005C03FD /* TTTireTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTireTableViewController.m; sourceTree = "<group>"; };
 		853CF0DE18F6009C007B4EC7 /* TireTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TireTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		853CF0E118F6009C007B4EC7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		853CF0E318F6009C007B4EC7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -214,6 +223,12 @@
 				85DE049518F75B810020BCA8 /* TTEditRacerTableViewController.m */,
 				85DE04A718F78CF40020BCA8 /* Images-2.xcassets */,
 				85CD7C5118F9DFAA00C19728 /* Images-2.xcassets */,
+				011E1FD618FBA429005C03FD /* TTBarcodeScannerViewController.h */,
+				011E1FD718FBA429005C03FD /* TTBarcodeScannerViewController.m */,
+				011E1FD918FBA486005C03FD /* TTTireListViewController.h */,
+				011E1FDA18FBA486005C03FD /* TTTireListViewController.m */,
+				011E1FDC18FBA580005C03FD /* TTTireTableViewController.h */,
+				011E1FDD18FBA580005C03FD /* TTTireTableViewController.m */,
 			);
 			path = TireTracker;
 			sourceTree = "<group>";
@@ -327,6 +342,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Cory Zachman";
 				TargetAttributes = {
+					853CF0DD18F6009C007B4EC7 = {
+						DevelopmentTeam = PLT3CHF9CL;
+					};
 					853CF10118F6009C007B4EC7 = {
 						TestTargetID = 853CF0DD18F6009C007B4EC7;
 					};
@@ -398,6 +416,9 @@
 				85DE049F18F77CDB0020BCA8 /* NSString+FontAwesome.m in Sources */,
 				853CF0EE18F6009C007B4EC7 /* main.m in Sources */,
 				853CF17218F65AC0007B4EC7 /* TTDataProvider.m in Sources */,
+				011E1FD818FBA429005C03FD /* TTBarcodeScannerViewController.m in Sources */,
+				011E1FDE18FBA580005C03FD /* TTTireTableViewController.m in Sources */,
+				011E1FDB18FBA486005C03FD /* TTTireListViewController.m in Sources */,
 				853CF12818F6510C007B4EC7 /* TTRacerViewController.m in Sources */,
 				85DE049E18F77CDB0020BCA8 /* FAImageView.m in Sources */,
 				853CF0FB18F6009C007B4EC7 /* TTLoginViewController.m in Sources */,
@@ -476,7 +497,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -494,6 +515,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "D6B45EBB-4E37-4295-A1E0-3F5BCAA83D65";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -515,7 +537,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -526,6 +548,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "D6B45EBB-4E37-4295-A1E0-3F5BCAA83D65";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -537,6 +560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -554,6 +578,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
