@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *groupTextField;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (weak, nonatomic) IBOutlet UIButton *editTiresButton;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
+@property (weak, nonatomic) IBOutlet UILabel *tiresUsed;
+@property (weak, nonatomic) IBOutlet UILabel *tiresAvailable;
 
 @property TTRacer *racer;
 -(void)updateUI;

@@ -30,6 +30,13 @@
 {
     [super viewDidLoad];
     self.dataProvider = [TTDataProvider sharedInstance];
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self.dataProvider loadRacers];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,7 +54,15 @@
 
 - (IBAction)addButtonPressed:(id)sender
 {
+    [self.dataProvider.racers addObject:[[TTRacer alloc] init]];
     
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    __block TTEditRacerViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"EditRacerViewController"];
+    [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+    
+    [vc setRacer:[self.dataProvider.racers objectAtIndex:self.dataProvider.racers.count-1]];
+    [self presentViewController:vc animated:YES completion:^{
+    }];
 }
 
 #pragma mark - TableView
@@ -55,7 +70,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *racerTableIdentifier = @"RaceViewCell";
-    
 
     TTRacerTableViewCell *racerTableViewCell = [self.tableView dequeueReusableCellWithIdentifier:racerTableIdentifier forIndexPath:indexPath];
     

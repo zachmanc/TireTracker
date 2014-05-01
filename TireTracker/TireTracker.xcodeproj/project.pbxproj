@@ -45,6 +45,7 @@
 		85A8E18418F78E4900D908A0 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A8E17C18F78E4900D908A0 /* Icon-Small@2x.png */; };
 		85CD7C5218F9DFAA00C19728 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CD7C5118F9DFAA00C19728 /* Images-2.xcassets */; };
 		85CD7C5418F9E02300C19728 /* BaseImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CD7C5318F9E02300C19728 /* BaseImage.png */; };
+		85CE4481191240C300178DFE /* TTTireTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CE4480191240C300178DFE /* TTTireTableViewCell.m */; };
 		85DE049318F679C20020BCA8 /* TTEditRacerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049218F679C20020BCA8 /* TTEditRacerViewController.m */; };
 		85DE049618F75B810020BCA8 /* TTEditRacerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049518F75B810020BCA8 /* TTEditRacerTableViewController.m */; };
 		85DE049E18F77CDB0020BCA8 /* FAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DE049918F77CDB0020BCA8 /* FAImageView.m */; };
@@ -116,6 +117,8 @@
 		85A8E17C18F78E4900D908A0 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Icons/Icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
 		85CD7C5118F9DFAA00C19728 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		85CD7C5318F9E02300C19728 /* BaseImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BaseImage.png; path = Icons/BaseImage.png; sourceTree = SOURCE_ROOT; };
+		85CE447F191240C300178DFE /* TTTireTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTireTableViewCell.h; sourceTree = "<group>"; };
+		85CE4480191240C300178DFE /* TTTireTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTireTableViewCell.m; sourceTree = "<group>"; };
 		85DE049118F679C20020BCA8 /* TTEditRacerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTEditRacerViewController.h; sourceTree = "<group>"; };
 		85DE049218F679C20020BCA8 /* TTEditRacerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTEditRacerViewController.m; sourceTree = "<group>"; };
 		85DE049418F75B810020BCA8 /* TTEditRacerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTEditRacerTableViewController.h; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 				011E1FDA18FBA486005C03FD /* TTTireListViewController.m */,
 				011E1FDC18FBA580005C03FD /* TTTireTableViewController.h */,
 				011E1FDD18FBA580005C03FD /* TTTireTableViewController.m */,
+				85CE447F191240C300178DFE /* TTTireTableViewCell.h */,
+				85CE4480191240C300178DFE /* TTTireTableViewCell.m */,
 			);
 			path = TireTracker;
 			sourceTree = "<group>";
@@ -424,6 +429,7 @@
 				853CF0FB18F6009C007B4EC7 /* TTLoginViewController.m in Sources */,
 				85DE049618F75B810020BCA8 /* TTEditRacerTableViewController.m in Sources */,
 				85DE04A018F77CDB0020BCA8 /* UIFont+FontAwesome.m in Sources */,
+				85CE4481191240C300178DFE /* TTTireTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,7 +566,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -569,6 +575,7 @@
 				GCC_PREFIX_HEADER = "TireTracker/TireTracker-Prefix.pch";
 				INFOPLIST_FILE = "TireTracker/TireTracker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "51F6287B-6558-4E08-9D55-0873B19A6927";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -578,7 +585,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -587,6 +594,7 @@
 				GCC_PREFIX_HEADER = "TireTracker/TireTracker-Prefix.pch";
 				INFOPLIST_FILE = "TireTracker/TireTracker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "51F6287B-6558-4E08-9D55-0873B19A6927";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

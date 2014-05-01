@@ -8,6 +8,11 @@
 
 #import "TTDataProvider.h"
 #import "TTRacer.h"
+#import <Dropbox/Dropbox.h>
+@interface TTDataProvider()
+@property DBDatastore *store;
+@end
+
 @implementation TTDataProvider
 @synthesize racers;
 + (id)sharedInstance {
@@ -24,6 +29,9 @@
     self = [super init];
     if (self) {
         self.racers = [[NSMutableArray alloc] initWithCapacity:16];
+        DBAccount *account = [[DBAccountManager sharedManager] linkedAccount];
+        self.store = [DBDatastore openDefaultStoreForAccount:account error:nil];
+        [self loadRacers];
     }
     return self;
 }
@@ -33,72 +41,66 @@
     self.racers = [[NSMutableArray alloc] initWithCapacity:16];
 }
 
--(void)seedData
+-(void)loadRacers
 {
-    TTRacer *racer = [[TTRacer alloc] init];
-    racer.identifier = [[NSUUID UUID] UUIDString];
-    racer.first = @"Cory";
-    racer.last = @"Zachman";
+    [self clearData];
+    DBTable *racerTable = [self.store getTable:@"racers"];
+    NSArray *records = [racerTable query:nil error:nil];
     
-    TTRacer *racer1 = [[TTRacer alloc] init];
-    racer1.identifier = [[NSUUID UUID] UUIDString];
-    racer1.first = @"Brandon";
-    racer1.last = @"Gouin";
-    
-    TTRacer *racer2 = [[TTRacer alloc] init];
-    racer2.identifier = [[NSUUID UUID] UUIDString];
-    racer2.first = @"John";
-    racer2.last = @"Snelson";
-    
-    TTRacer *racer3 = [[TTRacer alloc] init];
-    racer3.identifier = [[NSUUID UUID] UUIDString];
-    racer3.first = @"Kellen";
-    racer3.last = @"Frye";
-    
-    TTRacer *racer4 = [[TTRacer alloc] init];
-    racer4.identifier = [[NSUUID UUID] UUIDString];
-    racer4.first = @"Britt";
-    racer4.last = @"Kerridge";
-    
-    TTRacer *racer5 = [[TTRacer alloc] init];
-    racer5.identifier = [[NSUUID UUID] UUIDString];
-    racer5.first = @"Kenneth";
-    racer5.last = @"Leroue";
-    
-    TTRacer *racer6 = [[TTRacer alloc] init];
-    racer6.identifier = [[NSUUID UUID] UUIDString];
-    racer6.first = @"Bryan";
-    racer6.last = @"Pauk";
-    
-    TTRacer *racer7 = [[TTRacer alloc] init];
-    racer7.identifier = [[NSUUID UUID] UUIDString];
-    racer7.first = @"Richard";
-    racer7.last = @"Fliam";
-    
-    TTRacer *racer8 = [[TTRacer alloc] init];
-    racer8.identifier = [[NSUUID UUID] UUIDString];
-    racer8.first = @"Mark";
-    racer8.last = @"Niebur";
-    
-    TTRacer *racer9 = [[TTRacer alloc] init];
-    racer9.identifier = [[NSUUID UUID] UUIDString];
-    racer9.first = @"Neill";
-    racer9.last = @"Kipp";
-    
-    TTRacer *racer10 = [[TTRacer alloc] init];
-    racer10.identifier = [[NSUUID UUID] UUIDString];
-    racer10.first = @"Chris";
-    racer10.last = @"Lintz";
-    
-    [self.racers addObject:racer1];
-    [self.racers addObject:racer2];
-    [self.racers addObject:racer3];
-    [self.racers addObject:racer4];
-    [self.racers addObject:racer5];
-    [self.racers addObject:racer6];
-    [self.racers addObject:racer7];
-    [self.racers addObject:racer8];
-    [self.racers addObject:racer9];
-    [self.racers addObject:racer10];
+    for (DBRecord *record in records) {
+        TTRacer *racer = [[TTRacer alloc] init];
+        racer.identifier = [record.fields valueForKey:@"id"];
+        racer.first = [record.fields valueForKey:@"first"];
+        racer.last = [record.fields valueForKey:@"last"];
+        racer.tires = [[record.fields valueForKey:@"tires"] values];
+        
+        racer.group = [[record.fields valueForKey:@"group"] integerValue];
+        [self.racers addObject:racer];
+    }
 }
+
+-(void)sync
+{
+    
+    DBTable *racerTable = [self.store getTable:@"racers"];
+    for (TTRacer *racer in self.racers){
+        
+        NSArray *records = [racerTable query:@{@"id":racer.identifier} error:nil];
+        NSDictionary *racerDictionary = @{@"id":racer.identifier,@"first": racer.first,@"last":racer.last,@"group":[NSNumber numberWithLong:racer.group],@"tires":racer.tires};
+
+        if (records != nil && records.count > 0 && [[((DBRecord*)[records objectAtIndex:0]).fields valueForKey:@"id"] isEqualToString:racer.identifier]) {
+            [(DBRecord*)[records objectAtIndex:0] update:racerDictionary];
+        }else{
+            NSDictionary *racerDictionary = @{@"id":racer.identifier,@"first": racer.first,@"last":racer.last,@"group":[NSNumber numberWithLong:racer.group],@"tires":racer.tires};
+            [racerTable insert:racerDictionary];
+        }
+    }
+    
+    DBError *error;
+    [self.store sync:&error];
+    
+    if (error != nil) {
+        NSLog(@"Sync Error: %@",[error description]);
+    }
+}
+
+-(void)removeAll
+{
+    DBTable *racerTable = [self.store getTable:@"racers"];
+    NSArray *records = [racerTable query:nil error:nil];
+    for (DBRecord *record in records)
+    {
+        [record deleteRecord];
+    }
+    
+    [self.store sync:nil];
+}
+
+-(void)buildDropboxDictionary
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithCapacity:self.racers.count];
+
+}
+
+
 @end

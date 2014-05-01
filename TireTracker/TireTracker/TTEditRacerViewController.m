@@ -7,7 +7,7 @@
 //
 
 #import "TTEditRacerViewController.h"
-
+#import "TTDataProvider.h"
 @interface TTEditRacerViewController ()
 
 @end
@@ -61,7 +61,7 @@
     self.editRacerTableViewController.firstNameTextField.enabled = YES;
     self.editRacerTableViewController.lastNameTextField.enabled = YES;
     self.editRacerTableViewController.groupTextField.enabled = YES;
-    
+    self.editRacerTableViewController.segmentControl.enabled = YES;
     [self.editRacerTableViewController.firstNameTextField becomeFirstResponder];
 }
 
@@ -69,6 +69,16 @@
 {
     [self.editButtonBarItem setTitle:@"Edit"];
     [self.view endEditing:YES];
+    self.editRacerTableViewController.segmentControl.enabled = NO;
+    [self updateRacer];
+    [[TTDataProvider sharedInstance] sync];
+}
+
+-(void)updateRacer
+{
+    self.racer.first = self.editRacerTableViewController.firstNameTextField.text;
+    self.racer.last = self.editRacerTableViewController.lastNameTextField.text;
+    self.racer.group = self.editRacerTableViewController.segmentControl.selectedSegmentIndex;
 }
 
 #pragma mark - Navigation

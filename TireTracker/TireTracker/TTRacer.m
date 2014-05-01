@@ -13,6 +13,7 @@
 {
     self = [super init];
     if (self) {
+        self.identifier = [[[NSUUID UUID] UUIDString] substringToIndex:31];
         self.tires = [[NSMutableArray alloc] initWithCapacity:16];
     }
     return self;

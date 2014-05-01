@@ -19,7 +19,6 @@
                             secret:@"q1cxjc036yqvvzb"]; // either kDBRootAppFolder or kDBRootDropbox
     [DBAccountManager setSharedManager:accountManager];
     
-    [[TTDataProvider sharedInstance] seedData];
     return YES;
 }
 

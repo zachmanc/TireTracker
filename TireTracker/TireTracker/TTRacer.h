@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
+enum
+{
+    TTKid,
+    TTJr1,
+    TTJr2,
+};
+typedef NSInteger TTRacerGroup;
 @interface TTRacer : NSObject
 @property NSString *identifier;
 @property NSString *first;
 @property NSString *last;
-@property NSArray *tires;
-@property NSString *group;
+@property NSMutableArray *tires;
+@property TTRacerGroup group;
 @end

@@ -42,7 +42,22 @@
 {
     _racer = racer;
     self.nameLabel.text = [NSString stringWithFormat:@"%@ %@",racer.first, racer.last];
-    self.associationLabel.text = @"12-14";
+    self.associationLabel.text = [NSString stringWithFormat:@"%lu / %lu",self.racer.tires.count,[self groupToMax]];
+}
+
+-(NSInteger)groupToMax
+{
+    switch (self.racer.group) {
+        case TTKid:
+            return 4;
+            break;
+        case TTJr1:
+            return 16;
+            break;
+        default:
+            return 16;
+            break;
+    }
 }
 
 -(TTRacer*)racer

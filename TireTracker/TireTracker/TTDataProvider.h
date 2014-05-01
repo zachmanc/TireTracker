@@ -10,7 +10,8 @@
 
 @interface TTDataProvider : NSObject
 @property NSMutableArray *racers;
--(void)seedData;
+-(void)loadRacers;
 + (id)sharedInstance;
 -(void)clearData;
+-(void)sync;
 @end

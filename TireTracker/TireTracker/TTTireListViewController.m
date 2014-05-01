@@ -7,7 +7,7 @@
 //
 
 #import "TTTireListViewController.h"
-
+#import "TTBarcodeScannerViewController.h"
 @interface TTTireListViewController ()
 
 @end
@@ -35,17 +35,30 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)newButtonPressed:(id)sender
+-(IBAction)newTireButtonPressed:(id)sender
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"BarcodeScannerViewController"];
+    TTBarcodeScannerViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"BarcodeScannerViewController"];
     [vc setModalPresentationStyle:UIModalPresentationFullScreen];
-    
+    vc.racer = self.racer;
     [self presentViewController:vc animated:YES completion:^{
         
     }];
 }
 
+-(IBAction)tiresListBackButtonPressed:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"TireTableSegue"])
+    {
+        self.tireTableViewController = [segue destinationViewController];
+        [self.tireTableViewController setRacer:self.racer];
+    }
+}
 /*
 #pragma mark - Navigation
 

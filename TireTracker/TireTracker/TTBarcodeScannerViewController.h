@@ -7,17 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TTRacer.h"
 @interface TTBarcodeScannerViewController : UIViewController
 @property IBOutlet UIView *barcodeView;
-@property IBOutlet UILabel *tireLabel1;
-@property IBOutlet UILabel *tireLabel2;
-@property IBOutlet UILabel *tireLabel3;
-@property IBOutlet UILabel *tireLabel4;
+@property IBOutlet UITextField *tireLabel1;
+@property IBOutlet UITextField *tireLabel2;
+@property IBOutlet UITextField *tireLabel3;
+@property IBOutlet UITextField *tireLabel4;
 
 @property IBOutlet UIButton *tireDeleteLabel1;
 @property IBOutlet UIButton *tireDeleteLabel2;
 @property IBOutlet UIButton *tireDeleteLabel3;
 @property IBOutlet UIButton *tireDeleteLabel4;
+
+@property TTRacer *racer;
 
 @end

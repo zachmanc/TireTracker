@@ -10,8 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "UIFont+FontAwesome.h"
 #import "NSString+FontAwesome.h"
-
-@interface TTBarcodeScannerViewController () <AVCaptureMetadataOutputObjectsDelegate>
+#import "TTDataProvider.h"
+@interface TTBarcodeScannerViewController () <AVCaptureMetadataOutputObjectsDelegate, UIAlertViewDelegate>
 {
     AVCaptureSession *_session;
     AVCaptureDevice *_device;
@@ -108,6 +108,23 @@
         if (detectionString != nil)
         {
             _label.text = detectionString;
+            
+            if (([self.tireLabel1.text isEqualToString:@""] || self.tireLabel1.text == nil) && ![self barcodeAlreadyScanned:detectionString]) {
+                self.tireLabel1.text = detectionString;
+            }
+            
+            if (([self.tireLabel2.text isEqualToString:@""] || self.tireLabel2.text == nil) && ![self barcodeAlreadyScanned:detectionString]) {
+                self.tireLabel2.text = detectionString;
+            }
+            
+            if (([self.tireLabel3.text isEqualToString:@""] || self.tireLabel3.text == nil) && ![self barcodeAlreadyScanned:detectionString]) {
+                self.tireLabel3.text = detectionString;
+            }
+            
+            if (([self.tireLabel4.text isEqualToString:@""] || self.tireLabel4.text == nil) && ![self barcodeAlreadyScanned:detectionString]) {
+                self.tireLabel4.text = detectionString;
+            }
+            
             break;
         }
         else
@@ -115,6 +132,11 @@
     }
     
     _highlightView.frame = highlightViewRect;
+}
+
+-(BOOL)barcodeAlreadyScanned:(NSString*)detectionString
+{
+    return ([self.tireLabel1.text isEqualToString:detectionString] || [self.tireLabel2.text isEqualToString:detectionString] || [self.tireLabel3.text isEqualToString:detectionString] || [self.tireLabel4.text isEqualToString:detectionString]);
 }
 
 -(void)setUpLabels
@@ -144,11 +166,131 @@
     [self.tireDeleteLabel4 setTitle:[NSString fontAwesomeIconStringForEnum:FATimesCircle] forState:UIControlStateDisabled];
 }
 
+-(IBAction)clear1Pressed:(id)sender
+{
+    self.tireLabel1.text = @"";
+}
+
+-(IBAction)clear2Pressed:(id)sender
+{
+    self.tireLabel2.text = @"";
+}
+
+-(IBAction)clear3Pressed:(id)sender
+{
+    self.tireLabel3.text = @"";
+}
+
+-(IBAction)clear4Pressed:(id)sender
+{
+    self.tireLabel4.text = @"";
+}
+
+
+-(IBAction)barcodeScannerBackPressed:(id)sender
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+-(IBAction)barcodeScannerSavePressed:(id)sender
+{
+
+    NSString *alertMessage = [self buildAlertMessage];
+
+    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Validation Check"
+                                                      message:alertMessage
+                                                     delegate:self
+                                            cancelButtonTitle:@"Cancel"
+                                            otherButtonTitles:@"Save", nil];
+    [message show];
+}
+
+-(NSString*)buildAlertMessage
+{
+    NSMutableDictionary *tireMap = [[NSMutableDictionary alloc] init];
+    for (NSString *tire in self.racer.tires) {
+        [tireMap setValue:@"YES" forKey:tire];
+    }
+    
+    NSMutableDictionary *allTiresMap = [[NSMutableDictionary alloc] init];
+    NSArray *racers = ((TTDataProvider*)[TTDataProvider sharedInstance]).racers;
+    for (TTRacer *oneRacer in racers) {
+        for (NSString *tire in oneRacer.tires) {
+            [allTiresMap setValue:[NSString stringWithFormat:@"%@ %@",oneRacer.first,oneRacer.last ] forKey:tire];
+        }
+    }
+    
+    NSString *alertMessage = @"There were no validation errors with your tires. Click Save";
+    NSMutableString *failureMessage = [[NSMutableString alloc] initWithString:@""];
+    if ([tireMap valueForKey:self.tireLabel1.text] != nil && ![self.tireLabel1.text isEqualToString:@""]) {
+        [failureMessage appendString:@"Tire 1 has already been added to this racer. \n"];
+    }
+    
+    if ([tireMap valueForKey:self.tireLabel2.text] != nil && ![self.tireLabel2.text isEqualToString:@""]) {
+        [failureMessage appendString:@"Tire 2 has already been added to this racer. \n"];
+    }
+    
+    if ([tireMap valueForKey:self.tireLabel3.text] != nil && ![self.tireLabel3.text isEqualToString:@""]) {
+        [failureMessage appendString:@"Tire 3 has already been added to this racer. \n"];
+    }
+    
+    if ([tireMap valueForKey:self.tireLabel4.text] != nil && ![self.tireLabel4.text isEqualToString:@""]) {
+        [failureMessage appendString:@"Tire 4 has already been added to this racer. \n"];
+    }
+    
+    if ([failureMessage isEqualToString:@""]) {
+        return alertMessage;
+    }else{
+        return failureMessage;
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [self saveTires];
+    }
+}
+-(void)saveTires
+{
+    NSMutableDictionary *tireMap = [[NSMutableDictionary alloc] init];
+    for (NSString *tire in self.racer.tires) {
+        [tireMap setValue:@"YES" forKey:tire];
+    }
+    
+    if ([tireMap valueForKey:self.tireLabel1.text] == nil && ![self.tireLabel1.text isEqualToString:@""]) {
+        [self.racer.tires addObject:self.tireLabel1.text];
+    }
+    
+    if ([tireMap valueForKey:self.tireLabel2.text] == nil && ![self.tireLabel2.text isEqualToString:@""]) {
+        [self.racer.tires addObject:self.tireLabel2.text];
+    }
+    
+    if ([tireMap valueForKey:self.tireLabel3.text] == nil && ![self.tireLabel3.text isEqualToString:@""]) {
+        [self.racer.tires addObject:self.tireLabel3.text];
+    }
+    
+    if ([tireMap valueForKey:self.tireLabel4.text] == nil && ![self.tireLabel4.text isEqualToString:@""]) {
+        [self.racer.tires addObject:self.tireLabel4.text];
+    }
+    
+    [[TTDataProvider sharedInstance] sync];
+    
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
 
 /*
 #pragma mark - Navigation

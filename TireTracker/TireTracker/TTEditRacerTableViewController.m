@@ -9,6 +9,7 @@
 #import "TTEditRacerTableViewController.h"
 #import "NSString+FontAwesome.h"
 #import "UIFont+FontAwesome.h"
+#import "TTTireListViewController.h"
 
 @interface TTEditRacerTableViewController ()
 
@@ -39,6 +40,14 @@
     [self.editTiresButton setTitle:[NSString fontAwesomeIconStringForEnum:FAPencil] forState:UIControlStateHighlighted];
     [self.editTiresButton setTitle:[NSString fontAwesomeIconStringForEnum:FAPencil] forState:UIControlStateSelected];
     [self.editTiresButton setTitle:[NSString fontAwesomeIconStringForEnum:FAPencil] forState:UIControlStateDisabled];
+    self.segmentControl.enabled = NO;
+    [self.segmentControl addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
+
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self updateUI];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,7 +55,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)segmentChanged:(id)sender
+{
+    self.tiresAvailable.text = [NSString stringWithFormat:@"%lu",[self groupToMax:self.segmentControl.selectedSegmentIndex]];
 
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -65,16 +78,35 @@
     {
         self.firstNameTextField.text = self.racer.first;
         self.lastNameTextField.text = self.racer.last;
-        self.groupTextField.text = self.racer.group;
+        self.segmentControl.selectedSegmentIndex = self.racer.group;
+        self.tiresAvailable.text = [NSString stringWithFormat:@"%lu",[self groupToMax:self.racer.group]];
+        self.tiresUsed.text = [NSString stringWithFormat:@"%lu",self.racer.tires.count];
+
     }
 }
 
--(IBAction)editButtonPressed:(id)sender
+
+-(NSInteger)groupToMax:(NSInteger)group
+{
+    switch (group) {
+        case TTKid:
+            return 4;
+            break;
+        case TTJr1:
+            return 16;
+            break;
+        default:
+            return 16;
+            break;
+    }
+}
+
+-(IBAction)editRacerButtonPressed:(id)sender
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TireListViewController"];
+    TTTireListViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TireListViewController"];
     [vc setModalPresentationStyle:UIModalPresentationFullScreen];
-    
+    vc.racer = self.racer;
     [self presentViewController:vc animated:YES completion:^{
         
     }];
