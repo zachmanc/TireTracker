@@ -9,12 +9,12 @@
 #import "TTTireTableViewController.h"
 #import "TTTireTableViewCell.h"
 #import "TTDataProvider.h"
-@interface TTTireTableViewController ()
-
+@interface TTTireTableViewController () <UIAlertViewDelegate>
+@property NSIndexPath *deletePath;
 @end
 
 @implementation TTTireTableViewController
-
+@synthesize deletePath;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -131,14 +131,37 @@
     // Return YES if you want the specified item to be editable.
     return YES;
 }
+-(void)deleteTire
+{
+    [self.racer.tires removeObjectAtIndex:deletePath.row];
+    NSArray *indexes = [[NSArray alloc] initWithObjects:deletePath, nil];
+    [self.tableView deleteRowsAtIndexPaths:indexes withRowAnimation:UITableViewRowAnimationAutomatic];
+    [[TTDataProvider sharedInstance] sync];
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [self deleteTire];
+    }
+}
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.racer.tires removeObjectAtIndex:indexPath.row];
-        NSArray *indexes = [[NSArray alloc] initWithObjects:indexPath, nil];
-        [self.tableView deleteRowsAtIndexPaths:indexes withRowAnimation:UITableViewRowAnimationAutomatic];
-        [[TTDataProvider sharedInstance] sync];
+        
+        self.deletePath = indexPath;
+        
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Remove Tire"
+                                                          message:@"Please enter admin password"
+                                                         delegate:self
+                                                cancelButtonTitle:@"Cancel"
+                                                otherButtonTitles:@"Delete", nil];
+        
+        message.alertViewStyle = UIAlertViewStyleSecureTextInput;
+
+        
+        
+        [message show];
     }
 }
 @end
