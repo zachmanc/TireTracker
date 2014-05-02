@@ -18,7 +18,6 @@
                             initWithAppKey:@"2mynftuniy3uak1"
                             secret:@"q1cxjc036yqvvzb"]; // either kDBRootAppFolder or kDBRootDropbox
     [DBAccountManager setSharedManager:accountManager];
-    
     return YES;
 }
 
@@ -27,6 +26,7 @@
     DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
     if (account) {
         NSLog(@"App linked successfully!");
+        [[TTDataProvider sharedInstance] sync];
         return YES;
     }
     return NO;

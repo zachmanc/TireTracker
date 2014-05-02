@@ -11,6 +11,7 @@
 #import "TTRacerViewController.h"
 #import "NSString+FontAwesome.h"
 #import "UIFont+FontAwesome.h"
+#import "TTDataProvider.h"
 @interface TTLoginViewController ()
 
 @end
@@ -42,6 +43,7 @@
     DBAccount *account = [[DBAccountManager sharedManager] linkedAccount];
     if (account) {
         NSLog(@"App already linked");
+        [[TTDataProvider sharedInstance] sync];
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
         UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"RacerViewController"];
         [vc setModalPresentationStyle:UIModalPresentationFullScreen];
